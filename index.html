@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quaid-i-Azam University Islamabad | Excellence in Research & Higher Education</title>
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts for Cambridge Elegance -->
+
+    <!-- Google Fonts for Cambridge Academic Elegance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
     <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script>
         tailwind.config = {
@@ -19,546 +22,665 @@
                 extend: {
                     colors: {
                         cambridge: {
-                            blue: '#A3C1AD',
+                            navy: '#030C1A',
                             deepBlue: '#0A192F',
-                            navy: '#06101E',
-                            accent: '#183B5B',
-                            gold: '#D4AF37',
-                            lightBg: '#F8FAFC',
-                            cardBg: '#FFFFFF',
-                            slate: '#475569'
+                            lightBlue: '#112240',
+                            accent: '#1D3557',
+                            mint: '#83B89B',
+                            lightMint: '#A3C1AD',
+                            cream: '#F9FBFB',
+                            gold: '#C5A059',
+                            goldHover: '#B08C45',
+                            slateText: '#475569',
+                            borderLine: '#E2E8F0'
                         }
                     },
                     fontFamily: {
                         serif: ['"Playfair Display"', 'Georgia', 'serif'],
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
                         cinzel: ['Cinzel', 'serif']
+                    },
+                    boxShadow: {
+                        'card-hover': '0 20px 30px -10px rgba(10, 25, 47, 0.12), 0 10px 15px -5px rgba(10, 25, 47, 0.04)',
+                        'gold-glow': '0 0 25px rgba(197, 160, 89, 0.25)'
                     }
                 }
             }
         }
     </script>
     <style>
-        .cambridge-crest-shadow {
-            filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(3, 12, 26, 0.96) 0%, rgba(10, 25, 47, 0.88) 50%, rgba(3, 12, 26, 0.95) 100%);
         }
-        .hero-overlay {
-            background: linear-gradient(135deg, rgba(10, 25, 47, 0.94) 0%, rgba(10, 25, 47, 0.82) 50%, rgba(6, 16, 30, 0.92) 100%);
+        .glass-header {
+            background: rgba(10, 25, 47, 0.92);
+            backdrop-filter: blur(16px);
         }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.08);
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
-        .stat-card-border {
-            border-left: 3px solid #A3C1AD;
+        .subtle-pattern {
+            background-image: radial-gradient(#CBD5E1 0.8px, transparent 0.8px);
+            background-size: 20px 20px;
         }
-        .subtle-grid-bg {
-            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
-            background-size: 24px 24px;
+        .tab-btn-active {
+            background-color: #0A192F !important;
+            color: #FFFFFF !important;
+            border-color: #C5A059 !important;
+            box-shadow: 0 4px 12px rgba(10, 25, 47, 0.15);
         }
-        .faculty-tab-active {
-            border-bottom: 3px solid #A3C1AD;
-            color: #0A192F;
-            font-weight: 700;
+        .dept-card {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .dept-card:hover {
+            transform: translateY(-4px);
         }
     </style>
 </head>
-<body class="bg-cambridge-lightBg font-sans text-slate-800 antialiased selection:bg-cambridge-blue selection:text-cambridge-deepBlue">
+<body class="bg-cambridge-cream font-sans text-slate-800 antialiased selection:bg-cambridge-mint selection:text-cambridge-navy">
 
-    <!-- URGENT ANNOUNCEMENT TICKER -->
-    <div class="bg-amber-600 text-white text-xs py-2 px-4 border-b border-amber-700 font-medium">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <div class="flex items-center space-x-2 truncate">
-                <span class="bg-white/20 text-white px-2 py-0.5 rounded font-bold uppercase tracking-wider text-[10px]">Notice</span>
-                <span class="truncate">QAU Syndicate approves Budget 2026–27 & agrees in principle to establish new Teaching Hospital & Medical College.</span>
+    <!-- TOP OFFICIAL BULLETIN TICKER -->
+    <div class="bg-cambridge-navy text-slate-200 text-xs py-2.5 px-4 border-b border-white/10 relative z-50">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div class="flex items-center space-x-3 truncate w-full sm:w-auto">
+                <span class="bg-cambridge-gold text-cambridge-navy px-2.5 py-0.5 rounded font-extrabold uppercase tracking-widest text-[10px] shrink-0">Official Dispatch</span>
+                <span class="truncate font-medium text-slate-300">QAU Syndicate approves Budget 2026–27 & agrees in principle to establish new QAU Teaching Hospital & Medical College.</span>
             </div>
-            <a href="#news" class="underline text-amber-100 hover:text-white shrink-0 ml-3 hidden sm:inline">Read Details &rarr;</a>
-        </div>
-    </div>
-
-    <!-- TOP UTILITY BAR -->
-    <div class="bg-cambridge-navy text-slate-300 text-xs py-2 px-4 border-b border-slate-800/80">
-        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-            <div class="flex items-center space-x-6">
-                <span class="inline-flex items-center text-cambridge-blue font-medium">
-                    <i class="fa-solid fa-location-dot mr-1.5"></i> Margalla Hills Campus, Islamabad, 45320
-                </span>
-                <span class="hidden md:inline-flex items-center">
-                    <i class="fa-solid fa-phone mr-1.5 text-slate-400"></i> +92 (51) 9064-0000
-                </span>
-                <span class="hidden lg:inline-flex items-center">
-                    <i class="fa-solid fa-envelope mr-1.5 text-slate-400"></i> admissions@qau.edu.pk
-                </span>
-            </div>
-            <div class="flex items-center space-x-4 font-medium">
-                <a href="#portals" class="hover:text-cambridge-blue transition-colors">Students</a>
-                <span class="text-slate-600">|</span>
-                <a href="#portals" class="hover:text-cambridge-blue transition-colors">Faculty & Staff</a>
-                <span class="text-slate-600">|</span>
-                <a href="#portals" class="hover:text-cambridge-blue transition-colors">Alumni</a>
-                <span class="text-slate-600">|</span>
-                <a href="https://qau.edu.pk" target="_blank" class="hover:text-cambridge-blue transition-colors">QAU LMS</a>
-                <span class="text-slate-600">|</span>
-                <button onclick="toggleSearchModal()" class="text-cambridge-blue hover:text-white transition-colors flex items-center gap-1 pl-2">
-                    <i class="fa-solid fa-magnifying-glass"></i> Search
-                </button>
+            <div class="flex items-center gap-4 shrink-0 text-[11px]">
+                <a href="#news" class="text-cambridge-mint hover:text-white font-semibold transition-colors flex items-center gap-1">
+                    Read Bulletin <i class="fa-solid fa-arrow-right text-[9px]"></i>
+                </a>
+                <span class="text-slate-600 hidden md:inline">|</span>
+                <span class="text-slate-400 hidden md:inline"><i class="fa-solid fa-location-dot text-cambridge-mint mr-1"></i> Islamabad, PK</span>
             </div>
         </div>
     </div>
 
     <!-- MAIN BRAND HEADER -->
-    <header class="bg-cambridge-deepBlue text-white sticky top-0 z-40 shadow-xl border-b border-slate-800">
+    <header class="sticky top-0 z-40 glass-header border-b border-white/10 text-white shadow-2xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
                 
-                <!-- Logo & Crest Branding -->
+                <!-- University Crest Logo & Typography -->
                 <a href="#" class="flex items-center space-x-4 group">
-                    <div class="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center border border-cambridge-blue/40 group-hover:border-cambridge-blue transition-all duration-300 shadow-inner">
-                        <!-- Emblem SVG Crest -->
-                        <svg class="w-10 h-10 text-cambridge-blue group-hover:scale-105 transition-transform" viewBox="0 0 100 100" fill="currentColor">
-                            <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="4"/>
-                            <path d="M50 15 L60 35 L82 35 L64 48 L71 70 L50 56 L29 70 L36 48 L18 35 L40 35 Z" fill="#D4AF37"/>
-                            <path d="M30 75 Q50 88 70 75" fill="none" stroke="currentColor" stroke-width="3"/>
-                            <text x="50" y="85" font-family="Cinzel" font-size="8" text-anchor="middle" fill="#A3C1AD">1967</text>
+                    <div class="w-14 h-14 rounded-full bg-white/10 border border-cambridge-gold/40 flex items-center justify-center p-2 group-hover:border-cambridge-gold transition-all duration-300 group-hover:shadow-gold-glow">
+                        <!-- Custom Crest Emblem SVG -->
+                        <svg class="w-full h-full text-cambridge-mint group-hover:scale-105 transition-transform" viewBox="0 0 100 100" fill="currentColor">
+                            <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <circle cx="50" cy="50" r="41" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="3,3"/>
+                            <path d="M50 16 L61 36 L83 36 L65 49 L72 71 L50 57 L28 71 L35 49 L17 36 L39 36 Z" fill="#C5A059"/>
+                            <text x="50" y="86" font-family="Cinzel" font-size="9" text-anchor="middle" font-weight="bold" fill="#83B89B">EST. 1967</text>
                         </svg>
                     </div>
                     <div class="flex flex-col">
-                        <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-wider text-white group-hover:text-cambridge-blue transition-colors">
+                        <span class="font-cinzel text-xl sm:text-2xl font-bold tracking-wider text-white group-hover:text-cambridge-mint transition-colors">
                             QUAID-I-AZAM UNIVERSITY
                         </span>
-                        <span class="text-xs tracking-widest text-slate-300 font-serif uppercase italic">
-                            ISLAMABAD, PAKISTAN &bull; EST. 1967
+                        <span class="text-[10px] sm:text-xs tracking-widest text-slate-300 font-serif uppercase italic flex items-center gap-2">
+                            <span>ISLAMABAD</span> &bull; <span>RANKED #363 WORLDWIDE</span>
                         </span>
                     </div>
                 </a>
 
-                <!-- Desktop Primary Navigation -->
-                <nav class="hidden lg:flex items-center space-x-1 font-medium text-sm">
-                    <div class="relative group">
-                        <button class="px-3 py-2 rounded hover:bg-white/10 flex items-center gap-1 transition-colors">
-                            Study at QAU <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:rotate-180 transition-transform"></i>
-                        </button>
-                        <!-- Dropdown Menu -->
-                        <div class="absolute left-0 mt-1 w-64 bg-white text-slate-800 rounded-md shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-slate-200 z-50">
-                            <a href="#faculties" class="block px-4 py-2 hover:bg-slate-100 hover:text-cambridge-accent transition-colors">Undergraduate Programs (BS)</a>
-                            <a href="#faculties" class="block px-4 py-2 hover:bg-slate-100 hover:text-cambridge-accent transition-colors">BS Lateral Entry (5th Semester)</a>
-                            <a href="#faculties" class="block px-4 py-2 hover:bg-slate-100 hover:text-cambridge-accent transition-colors">Postgraduate & MPhil Studies</a>
-                            <a href="#faculties" class="block px-4 py-2 hover:bg-slate-100 hover:text-cambridge-accent transition-colors">Doctoral PhD Programs</a>
-                            <a href="#portals" class="block px-4 py-2 hover:bg-slate-100 hover:text-cambridge-accent transition-colors">Fee Structures & Scholarships</a>
-                        </div>
-                    </div>
+                <!-- Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-1 font-medium text-xs uppercase tracking-wider">
+                    <a href="#faculties" class="px-3 py-2 rounded text-slate-200 hover:text-white hover:bg-white/10 transition-colors">Faculties</a>
+                    <a href="#news" class="px-3 py-2 rounded text-slate-200 hover:text-white hover:bg-white/10 transition-colors">News & Events</a>
+                    <a href="#leadership" class="px-3 py-2 rounded text-slate-200 hover:text-white hover:bg-white/10 transition-colors">VC Message</a>
+                    <a href="#research" class="px-3 py-2 rounded text-slate-200 hover:text-white hover:bg-white/10 transition-colors">Research & ORIC</a>
+                    <a href="#portals" class="px-3 py-2 rounded text-slate-200 hover:text-white hover:bg-white/10 transition-colors">Quick Portals</a>
 
-                    <a href="#faculties" class="px-3 py-2 rounded hover:bg-white/10 transition-colors">Faculties & Departments</a>
-                    <a href="#research" class="px-3 py-2 rounded hover:bg-white/10 transition-colors">Research & ORIC</a>
-                    <a href="#news" class="px-3 py-2 rounded hover:bg-white/10 transition-colors">News & Seminars</a>
-                    <a href="#leadership" class="px-3 py-2 rounded hover:bg-white/10 transition-colors">Leadership</a>
-
-                    <a href="#portals" class="ml-3 px-4 py-2 bg-cambridge-blue text-cambridge-deepBlue font-semibold rounded hover:bg-white hover:shadow-lg transition-all">
-                        Admission Portal
+                    <a href="#portals" class="ml-4 px-5 py-2.5 bg-cambridge-gold hover:bg-cambridge-goldHover text-cambridge-navy font-bold rounded shadow-lg transition-all duration-300 flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-sm"></i> Admissions
                     </a>
                 </nav>
 
-                <!-- Mobile menu button -->
+                <!-- Mobile Menu Button -->
                 <div class="lg:hidden flex items-center">
-                    <button onclick="toggleMobileMenu()" class="text-white hover:text-cambridge-blue p-2 rounded focus:outline-none">
+                    <button onclick="toggleMobileMenu()" class="text-white hover:text-cambridge-mint p-2 rounded focus:outline-none">
                         <i id="menuIcon" class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Navigation Drawer -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-cambridge-navy border-t border-slate-800 px-4 pt-3 pb-6 space-y-2">
-            <a href="#faculties" class="block px-3 py-2 rounded text-slate-200 hover:bg-white/10">Faculties & Departments</a>
-            <a href="#research" class="block px-3 py-2 rounded text-slate-200 hover:bg-white/10">Research & ORIC</a>
-            <a href="#news" class="block px-3 py-2 rounded text-slate-200 hover:bg-white/10">News & Events</a>
-            <a href="#leadership" class="block px-3 py-2 rounded text-slate-200 hover:bg-white/10">VC Message</a>
-            <a href="#portals" class="block px-3 py-2 rounded text-center bg-cambridge-blue text-cambridge-deepBlue font-bold mt-4">Admissions Portal</a>
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-cambridge-navy border-t border-white/10 px-6 py-6 space-y-3">
+            <a href="#faculties" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-cambridge-mint font-medium text-sm">Faculties & Departments</a>
+            <a href="#news" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-cambridge-mint font-medium text-sm">News & Press Dispatches</a>
+            <a href="#leadership" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-cambridge-mint font-medium text-sm">VC Leadership Statement</a>
+            <a href="#research" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-cambridge-mint font-medium text-sm">Research & DRSM Library</a>
+            <a href="#portals" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-cambridge-mint font-medium text-sm">Digital Student Portals</a>
+            <a href="#portals" onclick="toggleMobileMenu()" class="block py-3 text-center bg-cambridge-gold text-cambridge-navy font-bold rounded mt-4 text-sm">Online Admission Portal</a>
         </div>
     </header>
 
-    <!-- HERO SECTION (Cambridge Academic Elegance) -->
-    <section class="relative min-h-[620px] lg:min-h-[700px] flex items-center bg-cambridge-deepBlue overflow-hidden">
-        <!-- Background Image with Overlay -->
+    <!-- HERO SECTION (Cambridge Academic Prestige) -->
+    <section class="relative min-h-[660px] lg:min-h-[720px] flex items-center bg-cambridge-navy overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2000&q=80" 
-                 alt="Academic Campus Architecture" 
-                 class="w-full h-full object-cover object-center transform scale-105 filter brightness-75">
-            <div class="absolute inset-0 hero-overlay"></div>
+                 alt="Quaid-i-Azam University Campus" 
+                 class="w-full h-full object-cover object-center transform scale-105 filter brightness-90">
+            <div class="absolute inset-0 hero-gradient"></div>
         </div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white">
             <div class="max-w-3xl space-y-6">
-                <!-- Badge -->
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-cambridge-blue text-xs font-semibold tracking-wider uppercase">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    Ranked #363 globally (QS World) &bull; #1 Public University in Pakistan
+                <!-- QS Ranking Ribbon -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-cambridge-mint text-xs font-semibold tracking-wider uppercase border border-cambridge-mint/30">
+                    <i class="fa-solid fa-trophy text-cambridge-gold"></i>
+                    QS World Ranking #363 &bull; #1 Public University in Pakistan
                 </div>
 
-                <!-- Headline -->
-                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-                    Intellectual Rigour. National Leadership. Global Research.
+                <!-- Main Hero Title -->
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                    Intellectual Rigour. National Impact. Global Research.
                 </h1>
 
-                <!-- Subhead -->
-                <p class="text-lg sm:text-xl text-slate-300 font-light leading-relaxed">
-                    Set across a majestic 1,700-acre campus at the foothills of the Margalla Hills, Quaid-i-Azam University has spearheaded higher education, scientific advancement, and public policy in Pakistan since 1967.
+                <!-- Lead Paragraph -->
+                <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+                    Nestled in a pristine 1,700-acre campus along the Margalla Hills, Quaid-i-Azam University has anchored higher education, scientific advancement, and public policy in Pakistan since 1967.
                 </p>
 
-                <!-- Action Buttons -->
+                <!-- Call to Action Buttons -->
                 <div class="pt-4 flex flex-wrap gap-4 items-center">
-                    <a href="#faculties" class="px-7 py-3.5 bg-cambridge-blue hover:bg-white text-cambridge-deepBlue font-bold rounded shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center gap-2">
+                    <a href="#faculties" class="px-8 py-4 bg-cambridge-gold hover:bg-cambridge-goldHover text-cambridge-navy font-bold rounded-lg shadow-xl hover:shadow-gold-glow transition-all duration-300 flex items-center gap-3">
                         Explore 38+ Departments <i class="fa-solid fa-arrow-right text-sm"></i>
                     </a>
-                    <a href="#portals" class="px-7 py-3.5 bg-transparent hover:bg-white/10 text-white font-semibold rounded border border-white/40 backdrop-blur-sm transition-all duration-300">
-                        Admissions & Fee Portal
+                    <a href="#portals" class="px-8 py-4 bg-transparent hover:bg-white/10 text-white font-semibold rounded-lg border border-white/30 backdrop-blur-md transition-all duration-300">
+                        Student & Fee Portals
                     </a>
                 </div>
             </div>
 
-            <!-- Quick Stats Bar (Real QAU Data Overlay) -->
-            <div class="mt-16 grid grid-cols-2 md:grid-cols-5 gap-4 p-6 glass-panel rounded-xl shadow-2xl border border-white/10">
-                <div class="stat-card-border pl-3 py-1">
-                    <div class="font-cinzel text-2xl sm:text-3xl font-bold text-white">#363</div>
-                    <div class="text-[11px] text-cambridge-blue font-medium uppercase tracking-wider mt-1">QS World Ranking</div>
+            <!-- Key Quick Stats Bar -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-5 gap-4 p-6 glass-card rounded-2xl shadow-2xl border border-white/15">
+                <div class="border-l-2 border-cambridge-gold pl-4 py-1">
+                    <div class="font-cinzel text-2xl sm:text-3xl font-extrabold text-white">#363</div>
+                    <div class="text-[11px] text-cambridge-mint font-semibold uppercase tracking-wider mt-1">QS Global Rank</div>
                 </div>
-                <div class="stat-card-border pl-3 py-1">
-                    <div class="font-cinzel text-2xl sm:text-3xl font-bold text-white">1,700</div>
-                    <div class="text-[11px] text-cambridge-blue font-medium uppercase tracking-wider mt-1">Acres Campus</div>
+                <div class="border-l-2 border-cambridge-gold pl-4 py-1">
+                    <div class="font-cinzel text-2xl sm:text-3xl font-extrabold text-white">1,700</div>
+                    <div class="text-[11px] text-cambridge-mint font-semibold uppercase tracking-wider mt-1">Acres Campus</div>
                 </div>
-                <div class="stat-card-border pl-3 py-1">
-                    <div class="font-cinzel text-2xl sm:text-3xl font-bold text-white">13,000+</div>
-                    <div class="text-[11px] text-cambridge-blue font-medium uppercase tracking-wider mt-1">Scholars & Students</div>
+                <div class="border-l-2 border-cambridge-gold pl-4 py-1">
+                    <div class="font-cinzel text-2xl sm:text-3xl font-extrabold text-white">13,000+</div>
+                    <div class="text-[11px] text-cambridge-mint font-semibold uppercase tracking-wider mt-1">Active Scholars</div>
                 </div>
-                <div class="stat-card-border pl-3 py-1">
-                    <div class="font-cinzel text-2xl sm:text-3xl font-bold text-white">90%+</div>
-                    <div class="text-[11px] text-cambridge-blue font-medium uppercase tracking-wider mt-1">PhD Qualified Faculty</div>
+                <div class="border-l-2 border-cambridge-gold pl-4 py-1">
+                    <div class="font-cinzel text-2xl sm:text-3xl font-extrabold text-white">90%+</div>
+                    <div class="text-[11px] text-cambridge-mint font-semibold uppercase tracking-wider mt-1">PhD Faculty</div>
                 </div>
-                <div class="stat-card-border pl-3 py-1 col-span-2 md:col-span-1">
-                    <div class="font-cinzel text-2xl sm:text-3xl font-bold text-white">38+</div>
-                    <div class="text-[11px] text-cambridge-blue font-medium uppercase tracking-wider mt-1">Schools & Institutes</div>
+                <div class="border-l-2 border-cambridge-gold pl-4 py-1 col-span-2 md:col-span-1">
+                    <div class="font-cinzel text-2xl sm:text-3xl font-extrabold text-white">38+</div>
+                    <div class="text-[11px] text-cambridge-mint font-semibold uppercase tracking-wider mt-1">Schools & Institutes</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COMPLETE FACULTIES & DEPARTMENTS EXPLORER -->
-    <section id="faculties" class="py-20 bg-white border-b border-slate-200 subtle-grid-bg">
+    <!-- FACULTIES & DEPARTMENT EXPLORER (REDESIGNED & HIGHLY REFINED) -->
+    <section id="faculties" class="py-24 bg-white subtle-pattern border-b border-cambridge-borderLine">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-cambridge-accent font-semibold text-xs tracking-widest uppercase">Academic Excellence</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cambridge-deepBlue mt-1">
-                    Faculties, Schools & Research Institutes
-                </h2>
-                <p class="text-slate-600 text-sm mt-2 leading-relaxed">
-                    Quaid-i-Azam University comprises four primary faculties along with specialized institutes, affiliated medical colleges, and national centres of excellence.
-                </p>
-
-                <!-- Search Department Input -->
-                <div class="mt-6 relative max-w-md mx-auto">
-                    <input type="text" id="deptSearchInput" onkeyup="filterDepartments()" placeholder="Search departments (e.g. Physics, Economics, Pharmacy)..." class="w-full px-4 py-3 pl-10 rounded-lg border border-slate-300 text-sm shadow-sm focus:outline-none focus:border-cambridge-accent">
-                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-sm"></i>
-                </div>
-            </div>
-
-            <!-- Faculty Tabs Header -->
-            <div class="flex overflow-x-auto justify-start md:justify-center border-b border-slate-300 mb-8 pb-1 text-sm font-medium gap-2 sm:gap-6">
-                <button onclick="switchFacultyTab('natural')" id="tab-natural" class="faculty-tab-active px-4 py-2 hover:text-cambridge-deepBlue whitespace-nowrap">Natural Sciences</button>
-                <button onclick="switchFacultyTab('social')" id="tab-social" class="px-4 py-2 text-slate-500 hover:text-cambridge-deepBlue whitespace-nowrap">Social Sciences</button>
-                <button onclick="switchFacultyTab('bio')" id="tab-bio" class="px-4 py-2 text-slate-500 hover:text-cambridge-deepBlue whitespace-nowrap">Biological Sciences</button>
-                <button onclick="switchFacultyTab('medical')" id="tab-medical" class="px-4 py-2 text-slate-500 hover:text-cambridge-deepBlue whitespace-nowrap">Medical & Institutes</button>
-            </div>
-
-            <!-- Faculty Content Grid -->
-            <!-- 1. NATURAL SCIENCES -->
-            <div id="content-natural" class="faculty-content-group grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-flask"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Department of Chemistry</h4>
-                    <p class="text-slate-600 text-xs mt-1">Physical, Organic, Inorganic & Analytical Chemistry labs.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-laptop-code"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Department of Computer Sciences</h4>
-                    <p class="text-slate-600 text-xs mt-1">AI, Software Engineering, Cybersecurity & Data Science.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-globe"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Department of Earth Sciences</h4>
-                    <p class="text-slate-600 text-xs mt-1">Geology, Geophysics, GIS & Petroleum Geosciences.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-microchip"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Department of Electronics</h4>
-                    <p class="text-slate-600 text-xs mt-1">Embedded Systems, VLSI, Communications & Robotics.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-network-wired"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Institute of Information Technology</h4>
-                    <p class="text-slate-600 text-xs mt-1">Advanced IT Systems, Network Security & Cloud Computing.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-square-root-variable"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Department of Mathematics</h4>
-                    <p class="text-slate-600 text-xs mt-1">Pure & Applied Mathematics, Computational Dynamics.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-atom"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Department of Physics</h4>
-                    <p class="text-slate-600 text-xs mt-1">High-Energy Physics, Condensed Matter & Quantum Optics.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-chart-line"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Department of Statistics</h4>
-                    <p class="text-slate-600 text-xs mt-1">Biostatistics, Econometrics & Predictive Analytics.</p>
-                </div>
-            </div>
-
-            <!-- 2. SOCIAL SCIENCES -->
-            <div id="content-social" class="faculty-content-group grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 hidden">
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-coins"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">School of Economics</h4>
-                    <p class="text-slate-600 text-xs mt-1">Macroeconomic Policy, Development & Financial Economics.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-landmark"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">School of Politics & Int. Relations (SPIR)</h4>
-                    <p class="text-slate-600 text-xs mt-1">Diplomacy, International Law & Foreign Policy Analysis.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-briefcase"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">School of Management Sciences (QASMS)</h4>
-                    <p class="text-slate-600 text-xs mt-1">BBA, MBA, Corporate Finance & Supply Chain.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-scale-balanced"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">School of Law</h4>
-                    <p class="text-slate-600 text-xs mt-1">5-Year LLB Honors, Constitutional & Corporate Jurisprudence.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Defence & Strategic Studies (DSS)</h4>
-                    <p class="text-slate-600 text-xs mt-1">National Security, Conflict Resolution & Arms Control.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-people-roof"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Sociology & Anthropology</h4>
-                    <p class="text-slate-600 text-xs mt-1">Gender Studies, Cultural Heritage & Rural Sociology.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-brain"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Department of Psychology</h4>
-                    <p class="text-slate-600 text-xs mt-1">Clinical, Behavioral & Organizational Psychology.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-archway"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Taxila Institute of Asian Civilizations</h4>
-                    <p class="text-slate-600 text-xs mt-1">Archaeology, Gandharan Heritage & Silk Road Studies.</p>
-                </div>
-            </div>
-
-            <!-- 3. BIOLOGICAL SCIENCES -->
-            <div id="content-bio" class="faculty-content-group grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 hidden">
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-dna"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Department of Biochemistry</h4>
-                    <p class="text-slate-600 text-xs mt-1">Molecular Biology, Enzymology & Proteomics.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-pills"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Faculty of Pharmacy</h4>
-                    <p class="text-slate-600 text-xs mt-1">5-Year Pharm-D, Pharmacology & Pharmaceutics.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-virus"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Department of Microbiology</h4>
-                    <p class="text-slate-600 text-xs mt-1">Immunology, Virology & Industrial Microbiology.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-tree"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Plant & Environmental Sciences</h4>
-                    <p class="text-slate-600 text-xs mt-1">Botany, Plant Genetics & Ecology Research.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-paw"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Department of Animal Sciences</h4>
-                    <p class="text-slate-600 text-xs mt-1">Zoology, Developmental Biology & Biodiversity.</p>
-                </div>
-            </div>
-
-            <!-- 4. MEDICAL & INSTITUTES -->
-            <div id="content-medical" class="faculty-content-group grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 hidden">
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-hospital-user"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">QAU School of Medicine</h4>
-                    <p class="text-slate-600 text-xs mt-1">Medical Sciences & upcoming QAU Teaching Hospital.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-user-doctor"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">AFPGMI (Armed Forces Postgrad)</h4>
-                    <p class="text-slate-600 text-xs mt-1">Postgraduate Clinical Medicine & Surgery Degrees.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-notes-medical"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Health Services Academy (HSA)</h4>
-                    <p class="text-slate-600 text-xs mt-1">Public Health, Epidemiology & Healthcare Policy.</p>
-                </div>
-                <div class="dept-card bg-slate-50 p-5 rounded-xl border border-slate-200 hover:border-cambridge-blue hover:shadow-md transition-all">
-                    <div class="text-cambridge-accent text-2xl mb-2"><i class="fa-solid fa-building-columns"></i></div>
-                    <h4 class="font-serif font-bold text-cambridge-deepBlue text-base">Area Study Centre (Americas & Africa)</h4>
-                    <p class="text-slate-600 text-xs mt-1">Interdisciplinary research on North & South American & African Affairs.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- REAL RECENT NEWS & ACADEMIC ANNOUNCEMENTS (October 2026) -->
-    <section id="news" class="py-20 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                <div>
-                    <span class="text-cambridge-accent font-semibold text-xs tracking-widest uppercase">Official Press & Dispatch</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cambridge-deepBlue mt-1">
-                        Recent News & Campus Events
+            
+            <!-- Section Title & Search Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div class="max-w-2xl">
+                    <span class="text-cambridge-gold font-extrabold text-xs tracking-widest uppercase flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap"></i> Academic Structure
+                    </span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-cambridge-navy mt-1">
+                        Faculties, Schools & Research Institutes
                     </h2>
+                    <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                        Quaid-i-Azam University operates across four core faculties, specialized research institutes, and affiliated medical boards. Search or filter through our academic departments.
+                    </p>
                 </div>
-                <span class="text-xs text-slate-500 font-medium">Updated: October 2026</span>
+
+                <!-- Interactive Department Search Box -->
+                <div class="w-full md:w-80 relative shrink-0">
+                    <input type="text" id="deptSearchInput" onkeyup="filterDepartments()" placeholder="Search departments (e.g. Physics, Law)..." 
+                           class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-300 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cambridge-accent shadow-sm transition-all">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-slate-400 text-sm"></i>
+                    <span id="deptCountBadge" class="absolute right-3 top-3 bg-cambridge-accent text-white text-[10px] font-bold px-2 py-1 rounded-full">38 Active</span>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Main News Item 1 -->
-                <div class="lg:col-span-2 bg-white rounded-xl shadow-md overflow-hidden border border-slate-200 flex flex-col md:flex-row group hover:shadow-xl transition-all">
-                    <div class="md:w-1/2 overflow-hidden relative min-h-[260px]">
-                        <img src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?auto=format&fit=crop&w=1000&q=80" alt="QAU Delegation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="md:w-1/2 p-6 flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center gap-2 text-xs font-semibold text-cambridge-accent mb-2">
-                                <span class="bg-blue-100 text-blue-900 px-2 py-0.5 rounded">International Relations</span>
-                                <span>&bull;</span>
-                                <span>Oct 11, 2026</span>
-                            </div>
-                            <h3 class="font-serif text-xl font-bold text-cambridge-deepBlue mb-2 leading-snug group-hover:text-cambridge-accent transition-colors">
-                                QAU and Fudan University (China) Discuss Academic and Research Partnership
-                            </h3>
-                            <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                                High-level academic delegates from Fudan University held meetings with Vice Chancellor Prof. Dr. Zafar Nawaz Jaspal to establish joint degree programs, research exchanges, and faculty fellowships.
-                            </p>
+            <!-- Filter Category Buttons -->
+            <div class="flex overflow-x-auto gap-3 pb-4 mb-8 no-scrollbar">
+                <button onclick="switchFacultyTab('all')" id="tab-all" class="tab-btn-active px-5 py-2.5 rounded-xl border border-slate-300 font-bold text-xs whitespace-nowrap transition-all">
+                    All Faculties (38)
+                </button>
+                <button onclick="switchFacultyTab('natural')" id="tab-natural" class="px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:border-cambridge-navy font-bold text-xs whitespace-nowrap transition-all">
+                    <i class="fa-solid fa-atom mr-1.5 text-cambridge-accent"></i> Natural Sciences (8)
+                </button>
+                <button onclick="switchFacultyTab('social')" id="tab-social" class="px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:border-cambridge-navy font-bold text-xs whitespace-nowrap transition-all">
+                    <i class="fa-solid fa-landmark mr-1.5 text-cambridge-accent"></i> Social Sciences (10)
+                </button>
+                <button onclick="switchFacultyTab('bio')" id="tab-bio" class="px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:border-cambridge-navy font-bold text-xs whitespace-nowrap transition-all">
+                    <i class="fa-solid fa-dna mr-1.5 text-cambridge-accent"></i> Biological Sciences (7)
+                </button>
+                <button onclick="switchFacultyTab('medical')" id="tab-medical" class="px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:border-cambridge-navy font-bold text-xs whitespace-nowrap transition-all">
+                    <i class="fa-solid fa-notes-medical mr-1.5 text-cambridge-accent"></i> Medical & Institutes (5)
+                </button>
+            </div>
+
+            <!-- DEPARTMENT CARDS CONTAINER -->
+            <div id="departmentsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- NATURAL SCIENCES -->
+                <div class="dept-card bg-white p-6 rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-card-hover flex flex-col justify-between" data-category="natural">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-slate-100 text-cambridge-navy flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </span>
+                            <span class="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded bg-blue-50 text-blue-800 tracking-wider">Natural Sciences</span>
                         </div>
-                        <a href="#" class="inline-flex items-center text-xs font-bold text-cambridge-deepBlue hover:text-cambridge-accent">
-                            Read Official Minutes <i class="fa-solid fa-arrow-right ml-1.5"></i>
+                        <h3 class="font-serif text-lg font-bold text-cambridge-navy mb-1">Department of Computer Sciences</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Leading innovation in Artificial Intelligence, Software Engineering, Data Science, and Cybersecurity with state-of-the-art computing labs.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-medium"><i class="fa-solid fa-graduation-cap text-slate-400 mr-1"></i> BS &bull; MS &bull; PhD</span>
+                        <a href="https://qau.edu.pk" target="_blank" class="font-bold text-cambridge-navy hover:text-cambridge-gold flex items-center gap-1">
+                            Visit Dept <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Secondary Featured Card -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200 flex flex-col justify-between p-6 group hover:shadow-xl transition-all">
+                <div class="dept-card bg-white p-6 rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-card-hover flex flex-col justify-between" data-category="natural">
                     <div>
-                        <div class="flex items-center gap-2 text-xs font-semibold text-cambridge-accent mb-2">
-                            <span class="bg-emerald-100 text-emerald-900 px-2 py-0.5 rounded">Diplomacy & Security</span>
-                            <span>&bull;</span>
-                            <span>Oct 13, 2026</span>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-slate-100 text-cambridge-navy flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-atom"></i>
+                            </span>
+                            <span class="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded bg-blue-50 text-blue-800 tracking-wider">Natural Sciences</span>
                         </div>
-                        <h3 class="font-serif text-lg font-bold text-cambridge-deepBlue mb-2 group-hover:text-cambridge-accent transition-colors">
-                            U.S. Embassy Political-Military Unit Chief Calls on VC QAU
-                        </h3>
+                        <h3 class="font-serif text-lg font-bold text-cambridge-navy mb-1">Department of Physics</h3>
                         <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                            U.S. Embassy officials visited QAU to explore regional stability research, academic scholarships, and institutional ties with the School of Politics & International Relations.
+                            Pioneer in High Energy Physics, Theoretical Physics, Condensed Matter, and Quantum Materials research in Pakistan.
                         </p>
                     </div>
-                    <a href="#" class="inline-flex items-center text-xs font-bold text-cambridge-deepBlue hover:text-cambridge-accent">
-                        View Press Release <i class="fa-solid fa-arrow-right ml-1.5"></i>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-medium"><i class="fa-solid fa-graduation-cap text-slate-400 mr-1"></i> BS &bull; MPhil &bull; PhD</span>
+                        <a href="https://qau.edu.pk" target="_blank" class="font-bold text-cambridge-navy hover:text-cambridge-gold flex items-center gap-1">
+                            Visit Dept <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dept-card bg-white p-6 rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-card-hover flex flex-col justify-between" data-category="natural">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-slate-100 text-cambridge-navy flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-flask"></i>
+                            </span>
+                            <span class="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded bg-blue-50 text-blue-800 tracking-wider">Natural Sciences</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-cambridge-navy mb-1">Department of Chemistry</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Advanced research in Organic, Inorganic, Physical, and Analytical Chemistry with extensive international publication records.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-medium"><i class="fa-solid fa-graduation-cap text-slate-400 mr-1"></i> BS &bull; MPhil &bull; PhD</span>
+                        <a href="https://qau.edu.pk" target="_blank" class="font-bold text-cambridge-navy hover:text-cambridge-gold flex items-center gap-1">
+                            Visit Dept <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dept-card bg-white p-6 rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-card-hover flex flex-col justify-between" data-category="natural">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-slate-100 text-cambridge-navy flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-square-root-variable"></i>
+                            </span>
+                            <span class="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded bg-blue-50 text-blue-800 tracking-wider">Natural Sciences</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-cambridge-navy mb-1">Department of Mathematics</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Excellence in Pure & Applied Mathematics, Computational Dynamics, Fluid Mechanics, and Algebra.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-medium"><i class="fa-solid fa-graduation-cap text-slate-400 mr-1"></i> BS &bull; MPhil &bull; PhD</span>
+                        <a href="https://qau.edu.pk" target="_blank" class="font-bold text-cambridge-navy hover:text-cambridge-gold flex items-center gap-1">
+                            Visit Dept <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SOCIAL SCIENCES -->
+                <div class="dept-card bg-white p-6 rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-card-hover flex flex-col justify-between" data-category="social">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-amber-50 text-amber-900 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-globe"></i>
+                            </span>
+                            <span class="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded bg-amber-100 text-amber-900 tracking-wider">Social Sciences</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-cambridge-navy mb-1">School of Politics & Int. Relations</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Premier institute for Diplomacy, Strategic Studies, International Law, Foreign Policy, and Regional Geopolitics.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-medium"><i class="fa-solid fa-graduation-cap text-slate-400 mr-1"></i> BS &bull; MPhil &bull; PhD</span>
+                        <a href="https://qau.edu.pk" target="_blank" class="font-bold text-cambridge-navy hover:text-cambridge-gold flex items-center gap-1">
+                            Visit Dept <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dept-card bg-white p-6 rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-card-hover flex flex-col justify-between" data-category="social">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-amber-50 text-amber-900 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </span>
+                            <span class="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded bg-amber-100 text-amber-900 tracking-wider">Social Sciences</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-cambridge-navy mb-1">School of Economics</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Rigorous training in Macroeconomics, Econometrics, Public Policy, and Development Economics.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-medium"><i class="fa-solid fa-graduation-cap text-slate-400 mr-1"></i> BS &bull; MPhil &bull; PhD</span>
+                        <a href="https://qau.edu.pk" target="_blank" class="font-bold text-cambridge-navy hover:text-cambridge-gold flex items-center gap-1">
+                            Visit Dept <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dept-card bg-white p-6 rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-card-hover flex flex-col justify-between" data-category="social">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-amber-50 text-amber-900 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </span>
+                            <span class="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded bg-amber-100 text-amber-900 tracking-wider">Social Sciences</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-cambridge-navy mb-1">School of Law</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            5-Year LLB Honors program delivering constitutional law, human rights jurisprudence, and international trade law.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-medium"><i class="fa-solid fa-graduation-cap text-slate-400 mr-1"></i> LLB (Hons) 5-Year</span>
+                        <a href="https://qau.edu.pk" target="_blank" class="font-bold text-cambridge-navy hover:text-cambridge-gold flex items-center gap-1">
+                            Visit Dept <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dept-card bg-white p-6 rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-card-hover flex flex-col justify-between" data-category="social">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-amber-50 text-amber-900 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-people-group"></i>
+                            </span>
+                            <span class="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded bg-amber-100 text-amber-900 tracking-wider">Social Sciences</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-cambridge-navy mb-1">Department of Anthropology</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Cultural anthropology, field ethnography, legal literacy workshops, and rural development research.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-medium"><i class="fa-solid fa-graduation-cap text-slate-400 mr-1"></i> BS &bull; MPhil &bull; PhD</span>
+                        <a href="https://qau.edu.pk" target="_blank" class="font-bold text-cambridge-navy hover:text-cambridge-gold flex items-center gap-1">
+                            Visit Dept <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- BIOLOGICAL SCIENCES -->
+                <div class="dept-card bg-white p-6 rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-card-hover flex flex-col justify-between" data-category="bio">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-900 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-dna"></i>
+                            </span>
+                            <span class="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded bg-emerald-100 text-emerald-900 tracking-wider">Biological Sciences</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-cambridge-navy mb-1">Department of Biochemistry</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Pioneering Molecular Genetics, Enzymology, Proteomics, and Cancer Therapeutics research.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-medium"><i class="fa-solid fa-graduation-cap text-slate-400 mr-1"></i> BS &bull; MPhil &bull; PhD</span>
+                        <a href="https://qau.edu.pk" target="_blank" class="font-bold text-cambridge-navy hover:text-cambridge-gold flex items-center gap-1">
+                            Visit Dept <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dept-card bg-white p-6 rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-card-hover flex flex-col justify-between" data-category="bio">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-900 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-pills"></i>
+                            </span>
+                            <span class="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded bg-emerald-100 text-emerald-900 tracking-wider">Biological Sciences</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-cambridge-navy mb-1">Faculty of Pharmacy</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Accredited 5-Year Pharm-D degree, Clinical Pharmacy, Industrial Formulations, and Drug Safety.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-medium"><i class="fa-solid fa-graduation-cap text-slate-400 mr-1"></i> Pharm-D &bull; MPhil</span>
+                        <a href="https://qau.edu.pk" target="_blank" class="font-bold text-cambridge-navy hover:text-cambridge-gold flex items-center gap-1">
+                            Visit Dept <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dept-card bg-white p-6 rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-card-hover flex flex-col justify-between" data-category="bio">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-900 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-virus"></i>
+                            </span>
+                            <span class="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded bg-emerald-100 text-emerald-900 tracking-wider">Biological Sciences</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-cambridge-navy mb-1">Department of Microbiology</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Immunology, Virology, Antimicrobial Resistance, and Industrial Fermentation studies.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-medium"><i class="fa-solid fa-graduation-cap text-slate-400 mr-1"></i> BS &bull; MPhil &bull; PhD</span>
+                        <a href="https://qau.edu.pk" target="_blank" class="font-bold text-cambridge-navy hover:text-cambridge-gold flex items-center gap-1">
+                            Visit Dept <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- MEDICAL & INSTITUTES -->
+                <div class="dept-card bg-white p-6 rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-card-hover flex flex-col justify-between" data-category="medical">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-teal-50 text-teal-900 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-hospital-user"></i>
+                            </span>
+                            <span class="text-[10px] font-extrabold uppercase px-2.5 py-1 rounded bg-teal-100 text-teal-900 tracking-wider">Medical Sciences</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-cambridge-navy mb-1">QAU School of Medicine</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Overseeing medical education and the upcoming state-of-the-art QAU Teaching Hospital & Medical College.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-medium"><i class="fa-solid fa-graduation-cap text-slate-400 mr-1"></i> Clinical Degrees</span>
+                        <a href="https://qau.edu.pk" target="_blank" class="font-bold text-cambridge-navy hover:text-cambridge-gold flex items-center gap-1">
+                            Visit Dept <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWS & DISPATCHES (EDITORIAL CAMBRIDGE GRID) -->
+    <section id="news" class="py-24 bg-slate-100 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-cambridge-gold font-extrabold text-xs tracking-widest uppercase flex items-center gap-2">
+                        <i class="fa-solid fa-newspaper"></i> University Press
+                    </span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-cambridge-navy mt-1">
+                        Recent News & Academic Dispatches
+                    </h2>
+                </div>
+                <span class="text-xs text-slate-500 font-semibold mt-2 md:mt-0">Updated: October 2026</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Main Featured News Story -->
+                <div class="lg:col-span-2 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 flex flex-col md:flex-row">
+                    <div class="md:w-1/2 relative min-h-[280px]">
+                        <img src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?auto=format&fit=crop&w=1000&q=80" 
+                             alt="Fudan University Partnership" 
+                             class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-cambridge-navy text-cambridge-gold text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                            International Linkages
+                        </span>
+                    </div>
+                    <div class="md:w-1/2 p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs text-slate-400 font-semibold mb-2">October 11, 2026 &bull; 3 min read</div>
+                            <h3 class="font-serif text-xl font-bold text-cambridge-navy mb-3 hover:text-cambridge-accent transition-colors">
+                                QAU & Fudan University (China) Formalize Strategic Research Partnership
+                            </h3>
+                            <p class="text-slate-600 text-xs leading-relaxed mb-6">
+                                Vice Chancellor Prof. Dr. Zafar Nawaz Jaspal received a senior delegation from Fudan University to implement joint doctoral research fellowships and exchange programs across Natural & Social Sciences.
+                            </p>
+                        </div>
+                        <a href="https://qau.edu.pk" target="_blank" class="inline-flex items-center text-xs font-bold text-cambridge-navy hover:text-cambridge-gold transition-colors">
+                            Read Official Statement <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Secondary Spotlight Card -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-emerald-50 text-emerald-800 text-[10px] font-extrabold px-2.5 py-1 rounded uppercase tracking-wider">Diplomacy</span>
+                            <span class="text-xs text-slate-400">Oct 13, 2026</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-cambridge-navy mb-3">
+                            U.S. Embassy Delegation Meets Vice Chancellor QAU
+                        </h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-6">
+                            Political-Military affairs delegates discussed educational exchange frameworks and strategic studies grants with the School of Politics & International Relations.
+                        </p>
+                    </div>
+                    <a href="https://qau.edu.pk" target="_blank" class="inline-flex items-center text-xs font-bold text-cambridge-navy hover:text-cambridge-gold transition-colors">
+                        View Coverage <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
                     </a>
                 </div>
 
-                <!-- Small News Item 1 -->
-                <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold text-cambridge-accent uppercase tracking-wider">Social Sciences</span>
-                        <h4 class="font-serif text-base font-bold text-cambridge-deepBlue mt-1">
-                            Anthropology Dept Hosts Legal Literacy Session on Workplace Equality
-                        </h4>
-                        <p class="text-slate-600 text-xs mt-2 leading-relaxed">Interactive workshop regarding workplace harassment laws and gender protection policies hosted at the QAU Social Sciences Auditorium.</p>
-                    </div>
-                    <span class="text-[11px] text-slate-400 mt-4 block">Oct 15, 2026</span>
+                <!-- Secondary News Item 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:border-cambridge-gold transition-all">
+                    <span class="text-[10px] font-bold text-cambridge-gold uppercase tracking-wider">Anthropology Seminar</span>
+                    <h4 class="font-serif text-base font-bold text-cambridge-navy mt-1">
+                        Department Hosts Legal Literacy Workshop on Workplace Protections
+                    </h4>
+                    <p class="text-slate-600 text-xs mt-2 leading-relaxed">Interactive legal awareness session conducted for postgraduate scholars at the Social Sciences Auditorium.</p>
+                    <span class="text-[11px] text-slate-400 mt-4 block">October 15, 2026</span>
                 </div>
 
-                <!-- Small News Item 2 -->
-                <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold text-cambridge-accent uppercase tracking-wider">Area Study Centre</span>
-                        <h4 class="font-serif text-base font-bold text-cambridge-deepBlue mt-1">
-                            Seminar on 'Pakistan–U.S. Relations: Prospects and Challenges'
-                        </h4>
-                        <p class="text-slate-600 text-xs mt-2 leading-relaxed">Distinguished diplomats and defense analysts convened at Area Study Centre for Africa, North & South America.</p>
-                    </div>
-                    <span class="text-[11px] text-slate-400 mt-4 block">Oct 13, 2026</span>
+                <!-- Secondary News Item 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:border-cambridge-gold transition-all">
+                    <span class="text-[10px] font-bold text-cambridge-gold uppercase tracking-wider">Area Study Centre</span>
+                    <h4 class="font-serif text-base font-bold text-cambridge-navy mt-1">
+                        International Seminar on Pakistan–Americas Diplomatic Relations
+                    </h4>
+                    <p class="text-slate-600 text-xs mt-2 leading-relaxed">Diplomats and foreign policy scholars assembled to evaluate trade, climate, and security engagement.</p>
+                    <span class="text-[11px] text-slate-400 mt-4 block">October 13, 2026</span>
                 </div>
 
-                <!-- Small News Item 3 -->
-                <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold text-cambridge-accent uppercase tracking-wider">Institutional Growth</span>
-                        <h4 class="font-serif text-base font-bold text-cambridge-deepBlue mt-1">
-                            Syndicate Approves Budget & Medical College Establishment
-                        </h4>
-                        <p class="text-slate-600 text-xs mt-2 leading-relaxed">Annual budget for fiscal year 2026–27 passed, alongside in-principle clearance for the QAU Teaching Hospital.</p>
-                    </div>
-                    <span class="text-[11px] text-slate-400 mt-4 block">Oct 05, 2026</span>
+                <!-- Secondary News Item 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:border-cambridge-gold transition-all">
+                    <span class="text-[10px] font-bold text-cambridge-gold uppercase tracking-wider">Institutional Advancement</span>
+                    <h4 class="font-serif text-base font-bold text-cambridge-navy mt-1">
+                        Syndicate Sanctions 2026–27 Annual Fiscal Budget
+                    </h4>
+                    <p class="text-slate-600 text-xs mt-2 leading-relaxed">Annual budget approved along with development plans for the QAU Medical College and Teaching Hospital.</p>
+                    <span class="text-[11px] text-slate-400 mt-4 block">October 05, 2026</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- REAL LEADERSHIP SECTION (VC Message) -->
-    <section id="leadership" class="py-20 bg-cambridge-deepBlue text-white relative overflow-hidden">
+    <!-- EXECUTIVE LEADERSHIP STATEMENT (VC SECTION) -->
+    <section id="leadership" class="py-24 bg-cambridge-navy text-white relative overflow-hidden">
+        <!-- Background Crest Stamp -->
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 opacity-5 pointer-events-none text-white">
+            <svg viewBox="0 0 100 100" fill="currentColor"><circle cx="50" cy="50" r="45"/></svg>
+        </div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- VC Photo & Badge -->
-                <div class="lg:col-span-5 relative">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-cambridge-blue/30">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Prof. Dr. Zafar Nawaz Jaspal" class="w-full h-[450px] object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-cambridge-deepBlue via-transparent to-transparent"></div>
+                
+                <!-- VC Officer Portrait -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-2xl overflow-hidden border-2 border-cambridge-gold/40 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
+                             alt="Prof. Dr. Zafar Nawaz Jaspal" 
+                             class="w-full h-[460px] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cambridge-navy via-transparent to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6">
-                            <h4 class="font-serif text-xl font-bold text-white">Prof. Dr. Zafar Nawaz Jaspal</h4>
-                            <p class="text-xs text-cambridge-blue">Vice Chancellor, Quaid-i-Azam University</p>
+                            <span class="bg-cambridge-gold text-cambridge-navy font-extrabold text-[10px] uppercase px-2.5 py-1 rounded tracking-wider">Vice Chancellor</span>
+                            <h3 class="font-serif text-xl font-bold text-white mt-2">Prof. Dr. Zafar Nawaz Jaspal</h3>
+                            <p class="text-xs text-cambridge-mint">Professor of International Relations & Executive Head</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- VC Message Text -->
+                <!-- VC Statement Text -->
                 <div class="lg:col-span-7 space-y-6">
-                    <span class="text-cambridge-blue text-xs font-bold tracking-widest uppercase">From the Vice Chancellor's Desk</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold leading-tight">
-                        "Fostering Critical Inquiry, Moral Integrity, and Scientific Mastery"
+                    <span class="text-cambridge-gold text-xs font-extrabold tracking-widest uppercase flex items-center gap-2">
+                        <i class="fa-solid fa-quote-left"></i> Leadership Philosophy
+                    </span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-extrabold leading-tight text-white">
+                        "Fostering Intellectual Rigour, Character, and Scientific Breakthroughs"
                     </h2>
-                    <p class="text-slate-300 leading-relaxed font-light text-sm sm:text-base">
-                        "Welcome to Quaid-i-Azam University. Since our establishment by an Act of Parliament in 1967, QAU has held an unyielding commitment to research precision, scholarly freedom, and national transformation. We take immense pride in nurturing over 13,000 scholars who drive innovation in physical, biological, social, and medical sciences. Our vision remains anchored in producing global leaders equipped to resolve the complex challenges of the 21st century."
-                    </p>
-                    <div class="pt-2 flex flex-wrap gap-6 items-center border-t border-slate-800">
-                        <div>
-                            <div class="font-cinzel text-base font-bold text-white">Prof. Dr. Zafar Nawaz Jaspal</div>
-                            <div class="text-xs text-slate-400">Vice Chancellor & Professor of IR</div>
-                        </div>
-                        <button onclick="toggleVCModal()" class="px-5 py-2.5 rounded border border-cambridge-blue/50 text-cambridge-blue hover:bg-cambridge-blue hover:text-cambridge-deepBlue font-medium text-xs transition-all">
-                            Read Full Executive Message
+                    <blockquote class="text-slate-300 leading-relaxed font-light text-sm sm:text-base border-l-2 border-cambridge-gold pl-6 italic">
+                        "Quaid-i-Azam University was chartered by an Act of Parliament in 1967 with an unambiguous mandate: to anchor postgraduate research and academic leadership for Pakistan. Today, with over 13,000 scholars, 38 departments, and a world ranking of #363, QAU continues to drive innovation across natural, social, and biological sciences."
+                    </blockquote>
+                    <div class="pt-4 flex flex-wrap items-center gap-4 border-t border-white/10">
+                        <button onclick="toggleVCModal()" class="px-6 py-3 bg-cambridge-gold hover:bg-cambridge-goldHover text-cambridge-navy font-bold rounded-lg text-xs transition-all shadow-lg">
+                            Read Executive Address
                         </button>
+                        <a href="#about" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg text-xs transition-all border border-white/20">
+                            QAU Governance Charter
+                        </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ESSENTIAL FACILITIES & RESEARCH ORIC -->
-    <section id="research" class="py-20 bg-white">
+    <!-- ESSENTIAL FACILITIES & DRSM CENTRAL LIBRARY -->
+    <section id="research" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-cambridge-accent font-semibold text-xs tracking-widest uppercase">Research Infrastructure</span>
-                <h2 class="font-serif text-3xl font-bold text-cambridge-deepBlue mt-1">
-                    Facilities & Commercialization
+                <span class="text-cambridge-gold font-extrabold text-xs tracking-widest uppercase">Research Infrastructure</span>
+                <h2 class="font-serif text-3xl font-extrabold text-cambridge-navy mt-1">
+                    Central Facilities & Commercialization
                 </h2>
                 <p class="text-slate-600 text-xs mt-2">
                     Empowering scholars with world-class archives, commercial incubation, and quality assurance.
@@ -567,187 +689,181 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- DRSM Library -->
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:shadow-lg transition-all">
-                    <div class="w-12 h-12 rounded-lg bg-cambridge-deepBlue text-cambridge-blue flex items-center justify-center text-xl mb-4">
-                        <i class="fa-solid fa-book-open-reader"></i>
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-cambridge-gold hover:shadow-card-hover transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-cambridge-navy text-cambridge-gold flex items-center justify-center text-2xl mb-6 shadow-md">
+                        <i class="fa-solid fa-book-open"></i>
                     </div>
-                    <h3 class="font-serif text-lg font-bold text-cambridge-deepBlue mb-2">DRSM Central Library</h3>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                        Dr. Raziuddin Siddiqi Memorial Library spans 102,500 sq ft, housing 230,000+ printed volumes, rare manuscripts, and HEC digital journals.
+                    <h3 class="font-serif text-xl font-bold text-cambridge-navy mb-2">DRSM Central Library</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-6">
+                        Dr. Raziuddin Siddiqi Memorial Library spans 102,500 sq ft, housing 230,000+ printed volumes, manuscripts, and digital journals.
                     </p>
-                    <a href="#" class="text-xs font-bold text-cambridge-accent hover:underline">Explore Digital Catalog &rarr;</a>
+                    <a href="https://qau.edu.pk" target="_blank" class="text-xs font-bold text-cambridge-navy hover:text-cambridge-gold flex items-center gap-2">
+                        Access Digital Library Catalog <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
                 </div>
 
-                <!-- ORIC & Incubation -->
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:shadow-lg transition-all">
-                    <div class="w-12 h-12 rounded-lg bg-cambridge-deepBlue text-cambridge-blue flex items-center justify-center text-xl mb-4">
+                <!-- ORIC -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-cambridge-gold hover:shadow-card-hover transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-cambridge-navy text-cambridge-gold flex items-center justify-center text-2xl mb-6 shadow-md">
                         <i class="fa-solid fa-lightbulb"></i>
                     </div>
-                    <h3 class="font-serif text-lg font-bold text-cambridge-deepBlue mb-2">ORIC & Business Incubation</h3>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                        Office of Research Innovation & Commercialization bridges academic research with industry patents and technology startups.
+                    <h3 class="font-serif text-xl font-bold text-cambridge-navy mb-2">ORIC & Incubation Center</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-6">
+                        Office of Research Innovation & Commercialization links university labs with industrial patents and start-up commercialization.
                     </p>
-                    <a href="#" class="text-xs font-bold text-cambridge-accent hover:underline">ORIC Research Grants &rarr;</a>
+                    <a href="https://qau.edu.pk" target="_blank" class="text-xs font-bold text-cambridge-navy hover:text-cambridge-gold flex items-center gap-2">
+                        Explore ORIC Research Grants <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
                 </div>
 
-                <!-- Quality Enhancement Cell -->
-                <div class="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:shadow-lg transition-all">
-                    <div class="w-12 h-12 rounded-lg bg-cambridge-deepBlue text-cambridge-blue flex items-center justify-center text-xl mb-4">
+                <!-- QEC -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-cambridge-gold hover:shadow-card-hover transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-cambridge-navy text-cambridge-gold flex items-center justify-center text-2xl mb-6 shadow-md">
                         <i class="fa-solid fa-award"></i>
                     </div>
-                    <h3 class="font-serif text-lg font-bold text-cambridge-deepBlue mb-2">Quality Enhancement Cell (QEC)</h3>
-                    <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                        Ensuring international accreditation standards, course evaluations, and curriculum alignment across all 38 departments.
+                    <h3 class="font-serif text-xl font-bold text-cambridge-navy mb-2">Quality Enhancement Cell</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed mb-6">
+                        Maintains HEC accreditation standards, international university evaluations, and curriculum quality across all departments.
                     </p>
-                    <a href="#" class="text-xs font-bold text-cambridge-accent hover:underline">QEC Reports & Reviews &rarr;</a>
+                    <a href="https://qau.edu.pk" target="_blank" class="text-xs font-bold text-cambridge-navy hover:text-cambridge-gold flex items-center gap-2">
+                        View QEC Accreditation <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- DIRECT STUDENT PORTALS & SERVICES -->
-    <section id="portals" class="py-16 bg-slate-100 border-t border-slate-200">
+    <!-- QUICK PORTALS GRID (SLEEK CARDS WITH DIRECT ACCESS) -->
+    <section id="portals" class="py-20 bg-slate-100 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10">
-                <h3 class="font-serif text-2xl font-bold text-cambridge-deepBlue">Digital Campus & Student Portals</h3>
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <span class="text-cambridge-gold font-extrabold text-xs tracking-widest uppercase">Digital Campus</span>
+                <h3 class="font-serif text-3xl font-extrabold text-cambridge-navy mt-1">Student & Staff Quick Portals</h3>
             </div>
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
-                <a href="#" class="p-4 bg-white rounded-lg border border-slate-200 hover:border-cambridge-blue hover:shadow transition-all">
-                    <i class="fa-solid fa-graduation-cap text-2xl text-cambridge-accent mb-2"></i>
-                    <div class="font-bold text-xs text-slate-800">Admissions Portal</div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
+                <a href="https://qau.edu.pk" target="_blank" class="p-6 bg-white rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-lg transition-all text-center group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-cambridge-navy flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="font-bold text-xs text-cambridge-navy">Admissions Portal</div>
+                    <div class="text-[10px] text-slate-400 mt-1">BS / MS / PhD</div>
                 </a>
-                <a href="#" class="p-4 bg-white rounded-lg border border-slate-200 hover:border-cambridge-blue hover:shadow transition-all">
-                    <i class="fa-solid fa-receipt text-2xl text-cambridge-accent mb-2"></i>
-                    <div class="font-bold text-xs text-slate-800">Fee Challan Portal</div>
+
+                <a href="https://qau.edu.pk" target="_blank" class="p-6 bg-white rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-lg transition-all text-center group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-900 flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-receipt"></i>
+                    </div>
+                    <div class="font-bold text-xs text-cambridge-navy">Fee Challan</div>
+                    <div class="text-[10px] text-slate-400 mt-1">Online Voucher</div>
                 </a>
-                <a href="#" class="p-4 bg-white rounded-lg border border-slate-200 hover:border-cambridge-blue hover:shadow transition-all">
-                    <i class="fa-solid fa-desktop text-2xl text-cambridge-accent mb-2"></i>
-                    <div class="font-bold text-xs text-slate-800">QAU Student LMS</div>
+
+                <a href="https://qau.edu.pk" target="_blank" class="p-6 bg-white rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-lg transition-all text-center group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-900 flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <div class="font-bold text-xs text-cambridge-navy">QAU LMS</div>
+                    <div class="text-[10px] text-slate-400 mt-1">Courses & Notes</div>
                 </a>
-                <a href="#" class="p-4 bg-white rounded-lg border border-slate-200 hover:border-cambridge-blue hover:shadow transition-all">
-                    <i class="fa-solid fa-envelope text-2xl text-cambridge-accent mb-2"></i>
-                    <div class="font-bold text-xs text-slate-800">Official Webmail</div>
+
+                <a href="https://qau.edu.pk" target="_blank" class="p-6 bg-white rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-lg transition-all text-center group">
+                    <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-900 flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="font-bold text-xs text-cambridge-navy">QAU Webmail</div>
+                    <div class="text-[10px] text-slate-400 mt-1">Faculty & Student</div>
                 </a>
-                <a href="#" class="p-4 bg-white rounded-lg border border-slate-200 hover:border-cambridge-blue hover:shadow transition-all">
-                    <i class="fa-solid fa-file-invoice text-2xl text-cambridge-accent mb-2"></i>
-                    <div class="font-bold text-xs text-slate-800">Exams & Transcript</div>
+
+                <a href="https://qau.edu.pk" target="_blank" class="p-6 bg-white rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-lg transition-all text-center group">
+                    <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-900 flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </div>
+                    <div class="font-bold text-xs text-cambridge-navy">Exams & Result</div>
+                    <div class="text-[10px] text-slate-400 mt-1">Transcripts</div>
                 </a>
-                <a href="#" class="p-4 bg-white rounded-lg border border-slate-200 hover:border-cambridge-blue hover:shadow transition-all">
-                    <i class="fa-solid fa-scroll text-2xl text-cambridge-accent mb-2"></i>
-                    <div class="font-bold text-xs text-slate-800">Convocation 2026</div>
+
+                <a href="https://qau.edu.pk" target="_blank" class="p-6 bg-white rounded-2xl border border-slate-200 hover:border-cambridge-gold hover:shadow-lg transition-all text-center group">
+                    <div class="w-12 h-12 rounded-xl bg-rose-50 text-rose-900 flex items-center justify-center text-xl mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-scroll"></i>
+                    </div>
+                    <div class="font-bold text-xs text-cambridge-navy">Convocation 2026</div>
+                    <div class="text-[10px] text-slate-400 mt-1">Degree Registration</div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER (Comprehensive Cambridge Academic Style) -->
-    <footer id="about" class="bg-cambridge-navy text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <!-- FOOTER (CAMBRIDGE PRESTIGE FOOTER) -->
+    <footer id="about" class="bg-cambridge-navy text-slate-300 pt-16 pb-12 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
                 
-                <!-- Col 1: QAU Branding -->
                 <div class="lg:col-span-2 space-y-4">
                     <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center border border-cambridge-blue">
-                            <i class="fa-solid fa-building-columns text-cambridge-blue"></i>
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-cambridge-gold">
+                            <i class="fa-solid fa-building-columns text-cambridge-gold"></i>
                         </div>
                         <span class="font-cinzel text-lg font-bold text-white tracking-wider">QUAID-I-AZAM UNIVERSITY</span>
                     </div>
                     <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
-                        Quaid-i-Azam University Islamabad (established 1967 under Act No. LVIII of 1973) is Pakistan's top-ranked public research university dedicated to scientific excellence and postgraduate studies.
+                        Quaid-i-Azam University Islamabad (established 1967 under Act No. LVIII of 1973) is Pakistan's premier public research university dedicated to scientific excellence and postgraduate studies.
                     </p>
-                    <div class="text-xs text-slate-400 space-y-1">
-                        <p><i class="fa-solid fa-location-dot mr-2 text-cambridge-blue"></i> Margalla Hills Campus, Islamabad, 45320, Pakistan</p>
-                        <p><i class="fa-solid fa-phone mr-2 text-cambridge-blue"></i> General Secretariat: +92 (51) 9064-0000</p>
-                        <p><i class="fa-solid fa-globe mr-2 text-cambridge-blue"></i> Official Web: www.qau.edu.pk</p>
+                    <div class="text-xs text-slate-400 space-y-1 pt-2">
+                        <p><i class="fa-solid fa-location-dot mr-2 text-cambridge-gold"></i> Margalla Hills Campus, Islamabad, 45320, Pakistan</p>
+                        <p><i class="fa-solid fa-phone mr-2 text-cambridge-gold"></i> General Secretariat: +92 (51) 9064-0000</p>
                     </div>
                 </div>
 
-                <!-- Col 2: Academics -->
                 <div>
-                    <h4 class="font-serif text-white font-semibold text-sm mb-4 border-b border-slate-800 pb-2">Faculties</h4>
+                    <h4 class="font-serif text-white font-bold text-sm mb-4">Faculties</h4>
                     <ul class="space-y-2 text-xs text-slate-400">
-                        <li><a href="#faculties" class="hover:text-cambridge-blue transition-colors">Natural Sciences</a></li>
-                        <li><a href="#faculties" class="hover:text-cambridge-blue transition-colors">Social Sciences</a></li>
-                        <li><a href="#faculties" class="hover:text-cambridge-blue transition-colors">Biological Sciences</a></li>
-                        <li><a href="#faculties" class="hover:text-cambridge-blue transition-colors">Medical Sciences & HSA</a></li>
-                        <li><a href="#faculties" class="hover:text-cambridge-blue transition-colors">Area Study Centres</a></li>
+                        <li><a href="#faculties" class="hover:text-cambridge-mint transition-colors">Natural Sciences</a></li>
+                        <li><a href="#faculties" class="hover:text-cambridge-mint transition-colors">Social Sciences</a></li>
+                        <li><a href="#faculties" class="hover:text-cambridge-mint transition-colors">Biological Sciences</a></li>
+                        <li><a href="#faculties" class="hover:text-cambridge-mint transition-colors">Medical Sciences</a></li>
+                        <li><a href="#faculties" class="hover:text-cambridge-mint transition-colors">Area Study Centres</a></li>
                     </ul>
                 </div>
 
-                <!-- Col 3: Quick Links -->
                 <div>
-                    <h4 class="font-serif text-white font-semibold text-sm mb-4 border-b border-slate-800 pb-2">Governance</h4>
+                    <h4 class="font-serif text-white font-bold text-sm mb-4">Governance</h4>
                     <ul class="space-y-2 text-xs text-slate-400">
-                        <li><a href="#leadership" class="hover:text-cambridge-blue transition-colors">Vice Chancellor's Office</a></li>
-                        <li><a href="#" class="hover:text-cambridge-blue transition-colors">Registrar Secretariat</a></li>
-                        <li><a href="#research" class="hover:text-cambridge-blue transition-colors">ORIC Office</a></li>
-                        <li><a href="#research" class="hover:text-cambridge-blue transition-colors">DRSM Central Library</a></li>
-                        <li><a href="#" class="hover:text-cambridge-blue transition-colors">QAU Affiliation Cell</a></li>
+                        <li><a href="#leadership" class="hover:text-cambridge-mint transition-colors">Vice Chancellor's Office</a></li>
+                        <li><a href="https://qau.edu.pk" target="_blank" class="hover:text-cambridge-mint transition-colors">Registrar Secretariat</a></li>
+                        <li><a href="#research" class="hover:text-cambridge-mint transition-colors">ORIC Research Office</a></li>
+                        <li><a href="#research" class="hover:text-cambridge-mint transition-colors">DRSM Central Library</a></li>
+                        <li><a href="https://qau.edu.pk" target="_blank" class="hover:text-cambridge-mint transition-colors">QAU Affiliation Cell</a></li>
                     </ul>
                 </div>
 
-                <!-- Col 4: Connect & Socials -->
                 <div>
-                    <h4 class="font-serif text-white font-semibold text-sm mb-4 border-b border-slate-800 pb-2">Connect With QAU</h4>
+                    <h4 class="font-serif text-white font-bold text-sm mb-4">Connect With QAU</h4>
                     <div class="flex space-x-3 mb-4">
-                        <a href="https://facebook.com" target="_blank" class="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-cambridge-blue hover:text-cambridge-deepBlue transition-colors"><i class="fa-brands fa-facebook-f text-xs"></i></a>
-                        <a href="https://twitter.com" target="_blank" class="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-cambridge-blue hover:text-cambridge-deepBlue transition-colors"><i class="fa-brands fa-x-twitter text-xs"></i></a>
-                        <a href="https://linkedin.com" target="_blank" class="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-cambridge-blue hover:text-cambridge-deepBlue transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-cambridge-gold hover:text-cambridge-navy transition-colors"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-cambridge-gold hover:text-cambridge-navy transition-colors"><i class="fa-brands fa-x-twitter text-xs"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-cambridge-gold hover:text-cambridge-navy transition-colors"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
                     </div>
-                    <span class="text-xs text-slate-400 block mb-2">QAU Gazette Newsletter</span>
-                    <div class="flex">
-                        <input type="email" placeholder="Your Email" class="bg-slate-900 border border-slate-700 text-xs px-2.5 py-1.5 rounded-l text-white focus:outline-none focus:border-cambridge-blue w-full">
-                        <button class="bg-cambridge-blue text-cambridge-deepBlue px-3 py-1.5 rounded-r font-bold text-xs hover:bg-white transition-colors">Subscribe</button>
-                    </div>
+                    <p class="text-[11px] text-slate-400">Subscribe for QAU Press Releases & Academic Gazette.</p>
                 </div>
 
             </div>
 
-            <!-- Bottom Copyright & Legal -->
             <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
                 <p>&copy; 2026 Quaid-i-Azam University Islamabad. Statutory Body under Act No. LVIII of 1973.</p>
                 <div class="flex space-x-6">
-                    <a href="#" class="hover:underline">Privacy Policy</a>
-                    <a href="#" class="hover:underline">HEC Quality Standards</a>
-                    <a href="#" class="hover:underline">RTI Portal</a>
-                    <a href="#" class="hover:underline">Web Accessibility</a>
+                    <a href="https://qau.edu.pk" target="_blank" class="hover:underline">Privacy Policy</a>
+                    <a href="https://qau.edu.pk" target="_blank" class="hover:underline">HEC Quality Standards</a>
+                    <a href="https://qau.edu.pk" target="_blank" class="hover:underline">RTI Portal</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- SEARCH MODAL -->
-    <div id="searchModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-start justify-center pt-20 px-4 hidden">
-        <div class="bg-white rounded-xl shadow-2xl max-w-2xl w-full p-6 border border-slate-200">
+    <!-- VC ADDRESS MODAL -->
+    <div id="vcModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-8 border border-slate-200 max-h-[85vh] overflow-y-auto">
             <div class="flex justify-between items-center pb-4 border-b border-slate-200">
-                <h3 class="font-serif font-bold text-lg text-cambridge-deepBlue">Search QAU Directory & Programs</h3>
-                <button onclick="toggleSearchModal()" class="text-slate-400 hover:text-slate-600 text-lg">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <div class="mt-4">
-                <div class="relative">
-                    <input type="text" placeholder="Type department, faculty name, course, or notice..." class="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-cambridge-accent text-slate-800 text-sm">
-                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400"></i>
-                </div>
-                <div class="mt-4 flex flex-wrap gap-2 text-xs">
-                    <span class="text-slate-500 font-medium">Frequent searches:</span>
-                    <a href="#faculties" onclick="toggleSearchModal()" class="px-2.5 py-1 bg-slate-100 rounded-full hover:bg-cambridge-blue hover:text-cambridge-deepBlue transition-colors">Physics Dept</a>
-                    <a href="#faculties" onclick="toggleSearchModal()" class="px-2.5 py-1 bg-slate-100 rounded-full hover:bg-cambridge-blue hover:text-cambridge-deepBlue transition-colors">School of Law</a>
-                    <a href="#portals" onclick="toggleSearchModal()" class="px-2.5 py-1 bg-slate-100 rounded-full hover:bg-cambridge-blue hover:text-cambridge-deepBlue transition-colors">Fee Portal</a>
-                    <a href="#research" onclick="toggleSearchModal()" class="px-2.5 py-1 bg-slate-100 rounded-full hover:bg-cambridge-blue hover:text-cambridge-deepBlue transition-colors">DRSM Library</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- VC MESSAGE MODAL -->
-    <div id="vcModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-white rounded-xl shadow-2xl max-w-3xl w-full p-6 sm:p-8 border border-slate-200 max-h-[85vh] overflow-y-auto">
-            <div class="flex justify-between items-center pb-4 border-b border-slate-200">
-                <h3 class="font-serif font-bold text-xl text-cambridge-deepBlue">Full Message from Vice Chancellor</h3>
+                <h3 class="font-serif font-bold text-xl text-cambridge-navy">Vice Chancellor's Full Address</h3>
                 <button onclick="toggleVCModal()" class="text-slate-400 hover:text-slate-600 text-lg">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
@@ -762,83 +878,80 @@
                 </p>
             </div>
             <div class="mt-6 pt-4 border-t border-slate-200 text-right">
-                <button onclick="toggleVCModal()" class="px-5 py-2 bg-cambridge-deepBlue text-white rounded font-medium text-xs hover:bg-cambridge-accent">Close Message</button>
+                <button onclick="toggleVCModal()" class="px-5 py-2.5 bg-cambridge-navy text-white rounded-lg font-bold text-xs hover:bg-cambridge-accent">Close Message</button>
             </div>
         </div>
     </div>
 
-    <!-- JAVASCRIPT LOGIC -->
+    <!-- JAVASCRIPT CONTROLLERS -->
     <script>
-        // Mobile drawer toggle
+        // Toggle mobile drawer menu
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             const icon = document.getElementById('menuIcon');
             menu.classList.toggle('hidden');
             if (menu.classList.contains('hidden')) {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
+                icon.className = 'fa-solid fa-bars text-2xl';
             } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
+                icon.className = 'fa-solid fa-xmark text-2xl';
             }
         }
 
-        // Search modal toggle
-        function toggleSearchModal() {
-            const modal = document.getElementById('searchModal');
-            modal.classList.toggle('hidden');
-        }
-
-        // VC message modal toggle
+        // Toggle VC Modal
         function toggleVCModal() {
             const modal = document.getElementById('vcModal');
             modal.classList.toggle('hidden');
         }
 
-        // Faculty Tab Switching Logic
-        function switchFacultyTab(tabKey) {
-            // Hide all content groups
-            document.querySelectorAll('.faculty-content-group').forEach(el => el.classList.add('hidden'));
-            
-            // Remove active classes on all tabs
-            ['natural', 'social', 'bio', 'medical'].forEach(key => {
-                const btn = document.getElementById(`tab-${key}`);
+        // Tab Switching for Departments
+        function switchFacultyTab(category) {
+            const cards = document.querySelectorAll('.dept-card');
+            const tabButtons = ['all', 'natural', 'social', 'bio', 'medical'];
+
+            // Highlight button
+            tabButtons.forEach(cat => {
+                const btn = document.getElementById(`tab-${cat}`);
                 if (btn) {
-                    btn.className = 'px-4 py-2 text-slate-500 hover:text-cambridge-deepBlue whitespace-nowrap';
+                    if (cat === category) {
+                        btn.className = 'tab-btn-active px-5 py-2.5 rounded-xl border border-slate-300 font-bold text-xs whitespace-nowrap transition-all';
+                    } else {
+                        btn.className = 'px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:border-cambridge-navy font-bold text-xs whitespace-nowrap transition-all';
+                    }
                 }
             });
 
-            // Show selected content group
-            const targetContent = document.getElementById(`content-${tabKey}`);
-            if (targetContent) {
-                targetContent.classList.remove('hidden');
-            }
-
-            // Highlight selected tab
-            const activeBtn = document.getElementById(`tab-${tabKey}`);
-            if (activeBtn) {
-                activeBtn.className = 'faculty-tab-active px-4 py-2 hover:text-cambridge-deepBlue whitespace-nowrap';
-            }
-        }
-
-        // Filter Department cards dynamically
-        function filterDepartments() {
-            const query = document.getElementById('deptSearchInput').value.toLowerCase();
-            const cards = document.querySelectorAll('.dept-card');
-
-            // Show all tabs when typing query so hidden ones are accessible
-            if (query.trim().length > 0) {
-                document.querySelectorAll('.faculty-content-group').forEach(el => el.classList.remove('hidden'));
-            }
-
+            // Filter cards
+            let visibleCount = 0;
             cards.forEach(card => {
-                const text = card.textContent.toLowerCase();
-                if (text.includes(query)) {
-                    card.style.display = 'block';
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = 'flex';
+                    visibleCount++;
                 } else {
                     card.style.display = 'none';
                 }
             });
+
+            document.getElementById('deptCountBadge').innerText = `${visibleCount} Visible`;
+        }
+
+        // Live Search Filter
+        function filterDepartments() {
+            const query = document.getElementById('deptSearchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.dept-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.getElementById('deptCountBadge').innerText = `${visibleCount} Matched`;
         }
     </script>
 </body>
